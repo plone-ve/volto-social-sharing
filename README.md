@@ -13,7 +13,7 @@ Volto social sharing integration addon.
 
 </div>
 
-To be used with ``mrs-developer``, see [Volto docs](https://6.dev-docs.plone.org/volto/addons/index.html) for further usage information.
+To be used with ``mrs-developer``, see [Volto docs](https://6.docs.plone.org/volto/addons/index.html) for further usage information.
 
 
 ![Desktop](./examples/desktop.png)
