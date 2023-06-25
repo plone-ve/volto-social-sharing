@@ -89,7 +89,7 @@ There are several parameters that can be customized
     * Options:
         * **name** (string): Social name
         * **fa_name** (array): Font awesome icon name. (It is necessary to add it in array format to determine the type of icon. Example: ["fab", "facebook-f"])
-          * [Docs](https://fontawesome.com/how-to-use/on-the-web/using-with/react#features)
+          * [Docs](https://fontawesome.com/v5/docs/web/use-with/react#features)
           * [Icon Gallery](https://fontawesome.com/icons?d=gallery)
         * **color** (string): CSS color value.
         * **sharing_url** (string): Link of the social network to share. ([Examples](https://github.com/bradvin/social-share-urls/blob/0c6d81fc950144e18ada062e0aba90d738b70d90/code/javascript/javascript/social-share-media.js#L151))
@@ -99,11 +99,11 @@ There are several parameters that can be customized
         * In the **desktop** view centered on the right.
         * In the **mobile** view centered on the bottom.
     * Options:
-        * defaultPositions["desktop"] = {[React DOM Style](https://reactjs.org/docs/dom-elements.html#style)}
-        * defaultPositions["mobile"] = {[React DOM Style](https://reactjs.org/docs/dom-elements.html#style)}
-* **logoSize**: Font Awesome logo size. ([Doc](https://fontawesome.com/how-to-use/on-the-web/using-with/react#features))
+        * defaultPositions["desktop"] = {[React DOM Style](https://legacy.reactjs.org/docs/dom-elements.html#style)}
+        * defaultPositions["mobile"] = {[React DOM Style](https://legacy.reactjs.org/docs/dom-elements.html#style)}
+* **logoSize**: Font Awesome logo size. ([Doc](https://fontawesome.com/v5/docs/web/use-with/react#features))
     * By default: "lg".
-    * [Options](https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons#scale): "lg" | "xs" | "sm" | "2x" | "3x" | "4x" | "5x" | "6x" | "7x" | "8x" | "9x" | "10x"
+    * [Options](https://fontawesome.com/docs/web/style/size#scale): "lg" | "xs" | "sm" | "2x" | "3x" | "4x" | "5x" | "6x" | "7x" | "8x" | "9x" | "10x"
 * **buttonSize**: Button with and height.
     * By default: "30px"
 
