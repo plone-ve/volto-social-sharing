@@ -225,12 +225,16 @@ export const settings = {
 
 ## Contributing
 
+See [DEVELOP.md](https://github.com/codesyntax/volto-social-sharing/blob/main/DEVELOP.md).
+
 Feel free to send PRs.
 
 ## Icon Author
 
-By Throwaway icons - https://thenounproject.com/search/?q=share&amp;i=1343423, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=89416553
+ - By Throwaway icons - https://thenounproject.com/search/?q=share&amp;i=1343423, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=89416553
 
 ## License
 
 MIT © [CodeSyntax](https://github.com/codesyntax)
+
+See [LICENSE.md](https://github.com/codesyntax/volto-social-sharing/blob/main/LICENSE.md) for details.
