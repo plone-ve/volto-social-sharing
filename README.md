@@ -13,7 +13,7 @@ Volto social sharing integration addon.
 
 </div>
 
-To be used with mrs-developer, see [Volto docs](https://6.dev-docs.plone.org/volto/addons/index.html) for further usage informations.
+To be used with ``mrs-developer``, see [Volto docs](https://6.dev-docs.plone.org/volto/addons/index.html) for further usage information.
 
 
 ![Desktop](./examples/desktop.png)
@@ -33,9 +33,9 @@ To be used with mrs-developer, see [Volto docs](https://6.dev-docs.plone.org/vol
 <br>
 
 ## Usage <a name="usage"></a>
-To inject the component in the project add the appextras configuration in the config.js file.
+To inject the component in the project add the ``AppExtras`` configuration in the ``config.js`` file.
 
-A suggested way is to use `appExtras` from settings object ([docs](https://docs.voltocms.com/recipes/appextras/)):
+A suggested way is to use `appExtras` from settings object ([docs](https://6.docs.plone.org/volto/recipes/appextras.html)):
 
 ```jsx
 import SocialSharing from '@codesyntax/volto-social-sharing/SocialSharing';
@@ -53,7 +53,6 @@ export const settings = {
 ```
 
 <br>
-
 
 ## To determine which paths will be displayed <a name="paths"></a>
 
@@ -78,13 +77,14 @@ export const settings = {
 <br>
 
 ## Customization <a name="customization"></a>
+
 There are several parameters that can be customized
 
 * **socialElements**: List of social items.
     * By default:
         * Facebook
         * Twitter
-        * Whatsapp (Only on mobile)
+        * WhatsApp (Only on mobile)
         * Telegram (Only on mobile)
     * Options:
         * **name** (string): Social name
@@ -186,7 +186,6 @@ export const settings = {
 ![change_value_mobile](./examples/change_value_mobile.png)
 
 
-
 <br>
 
 ## Remove existing social item <a name="remove_social_item"></a>
@@ -218,8 +217,6 @@ export const settings = {
 ```
 
 
-
-
 <br>
 
 ---
@@ -231,6 +228,7 @@ export const settings = {
 Feel free to send PRs.
 
 ## Icon Author
+
 By Throwaway icons - https://thenounproject.com/search/?q=share&amp;i=1343423, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=89416553
 
 ## License
