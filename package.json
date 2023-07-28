@@ -35,5 +35,17 @@
   },
   "devDependencies": {
     "prettier": "^2.8.8"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.overrides",
+        "options": {
+          "parser": "less"
+        }
+      }
+    ]
   }
 }
