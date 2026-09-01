@@ -38,18 +38,19 @@ To inject the component in the project add the ``AppExtras`` configuration in th
 A suggested way is to use `appExtras` from settings object ([docs](https://6.docs.plone.org/volto/recipes/appextras.html)):
 
 ```jsx
+import '@plone/volto/config';
 import SocialSharing from '@codesyntax/volto-social-sharing/SocialSharing';
 
-export const settings = {
-  ...defaultSettings,
-  appExtras: [
-    ...defaultSettings.appExtras,
-    {
-      match: '',
-      component: SocialSharing,
-    },
-  ],
-};
+export default function applyConfig(config) {
+  config.settings.appExtras = [
+      ...config.settings.appExtras,
+      {
+        match: '',
+        component: SocialSharing,
+      },
+  ];
+  return config;
+}
 ```
 
 <br>
@@ -59,10 +60,9 @@ export const settings = {
 You can determine in which views the component will be displayed
 
 ```js
-export const settings = {
-  ...defaultSettings,
-  appExtras: [
-    ...defaultSettings.appExtras,
+export default function applyConfig(config) {
+  config.settings.appExtras = [
+    ...config.settings.appExtras,
     {
       match: {
         path: ['**/ekitaldiak/**', '**/eventos/**', '/eu/albisteak/**', '/es/noticias/**'],
@@ -70,8 +70,11 @@ export const settings = {
       },
       component: SocialSharing
     },
-  ],
-};
+  ]
+
+  return config
+}
+
 ```
 
 <br>
@@ -89,7 +92,7 @@ There are several parameters that can be customized
     * Options:
         * **name** (string): Social name
         * **fa_name** (array): Font awesome icon name. (It is necessary to add it in array format to determine the type of icon. Example: ["fab", "facebook-f"])
-          * [Docs](https://fontawesome.com/v5/docs/web/use-with/react#features)
+          * [Docs](https://docs-v5.fontawesome.com/web/use-with/react#features)
           * [Icon Gallery](https://fontawesome.com/icons?d=gallery)
         * **color** (string): CSS color value.
         * **sharing_url** (string): Link of the social network to share. ([Examples](https://github.com/bradvin/social-share-urls/blob/0c6d81fc950144e18ada062e0aba90d738b70d90/code/javascript/javascript/social-share-media.js#L151))
@@ -125,10 +128,10 @@ DEFAULT_SOCIAL.push({
   id: "pt"
 });
 
-export const settings = {
-  ...defaultSettings,
-  appExtras: [
-    ...defaultSettings.appExtras,
+
+export default function applyConfig(config) {
+  config.settings.appExtras = [
+    ...config.settings.appExtras,
     {
       match: {
         path: ['**/ekitaldiak/**', '**/eventos/**', '/eu/albisteak/**', '/es/noticias/**'],
@@ -139,8 +142,10 @@ export const settings = {
            socialElements: DEFAULT_SOCIAL
       }
     },
-  ],
-};
+  ]
+  return config;
+}
+
 ```
 
 #### Example
@@ -162,10 +167,10 @@ let facebook = DEFAULT_SOCIAL.find(social => social.id == "fb");
 if (facebook) {
   facebook.color = "red";
 }
-export const settings = {
-  ...defaultSettings,
-  appExtras: [
-    ...defaultSettings.appExtras,
+
+export default function applyConfig(config) {
+  config.settings.appExtras = [
+    ...config.settings.appExtras,
     {
       match: {
         path: ['**/ekitaldiak/**', '**/eventos/**', '/eu/albisteak/**', '/es/noticias/**'],
@@ -176,15 +181,17 @@ export const settings = {
         socialElements: DEFAULT_SOCIAL
       }
     },
-  ],
-};
+  ]
+
+  return config;
+}
+
 ```
 
 #### Example
 
 ![change_value_desktop](./examples/change_value_desktop.png)
 ![change_value_mobile](./examples/change_value_mobile.png)
-
 
 <br>
 
@@ -198,24 +205,27 @@ import {DEFAULT_SOCIAL} from '@codesyntax/volto-social-sharing/defaultSettings';
 const index = DEFAULT_SOCIAL.findIndex(social => social.id === "fb");
 if (index !== undefined) DEFAULT_SOCIAL.splice(index, 1);
 
-export const settings = {
-  ...defaultSettings,
-  appExtras: [
-    ...defaultSettings.appExtras,
-    {
-      match: {
-        path: ['**/ekitaldiak/**', '**/eventos/**', '/eu/albisteak/**', '/es/noticias/**'],
-        exact: true,
-      },
-      component: SocialSharing,
-      props:{
-        socialElements: DEFAULT_SOCIAL
-      }
+export default function applyConfig(config) {
+  config.settings.appExtras = [
+    ...config.settings.appExtras,
+  {
+    match: {
+      path: ['**/ekitaldiak/**', '**/eventos/**', '/eu/albisteak/**', '/es/noticias/**'],
+      exact: true,
     },
-  ],
-};
-```
+    component: SocialSharing,
+    props:{
+      socialElements: DEFAULT_SOCIAL
+    }
+  },
 
+  ];
+
+  return config;
+
+}
+
+```
 
 <br>
 

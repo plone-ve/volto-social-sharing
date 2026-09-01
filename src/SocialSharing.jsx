@@ -21,15 +21,15 @@ const SocialSharing = ({
 }) => {
   const [currentUrl, setCurrentUrl] = useState('');
   const [display, setDisplay] = useState(true);
-  const pathName = location.pathname;
+  const pathName = location?.pathname;
 
   useEffect(() => {
     setCurrentUrl(window.location.href);
-  });
+  }, []);
 
   // Disable sharing on non content routes
   useEffect(() => {
-    setDisplay(!isCmsUi(pathName));
+    pathName && setDisplay(!isCmsUi(pathName));
   }, [pathName]);
 
   // MOBILE checker
@@ -44,7 +44,7 @@ const SocialSharing = ({
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange);
     };
-  });
+  }, []);
   // end - MOBILE checker
 
   return (
@@ -84,6 +84,7 @@ const SocialSharing = ({
                         title={`Send to ${social.name}`}
                         href={`${social.sharing_url}${currentUrl}`}
                         className="fa-icon-position"
+                        rel="noreferrer"
                       >
                         <FontAwesomeIcon
                           icon={social.fa_name}
