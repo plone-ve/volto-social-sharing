@@ -11,6 +11,8 @@ npm-debug.log*
 *.swp
 yarn-error.log
 yarn.lock
+.yarn/*
+*/.yarn
 package-lock.json
 
 node_modules
