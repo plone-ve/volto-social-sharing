@@ -23,12 +23,23 @@ To be used with ``mrs-developer``, see [Volto docs](https://6.docs.plone.org/vol
 
 # Table of Contents
 
-1. [Usage](#usage)
-2. [Paths config](#paths)
-3. [Customization](#customization)
-4. [New social item](#new_social_item)
-5. [Edit social item](#edit_social_item)
-6. [Remove social item](#remove_social_item)
+1. [Translations](#translations)
+2. [Usage](#usage)
+3. [Paths config](#paths)
+4. [Customization](#customization)
+5. [New social item](#new_social_item)
+6. [Edit social item](#edit_social_item)
+7. [Remove social item](#remove_social_item)
+
+<br>
+
+## Translations <a name="translations"></a>
+
+This add-on support the following languages:
+
+- English
+
+- Spanish
 
 <br>
 
