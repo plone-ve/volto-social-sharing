@@ -13,7 +13,7 @@ Volto social sharing integration addon.
 
 </div>
 
-To be used with mrs-developer, see [Volto docs](https://6.dev-docs.plone.org/volto/addons/index.html) for further usage informations.
+To be used with ``mrs-developer``, see [Volto docs](https://6.docs.plone.org/volto/addons/index.html) for further usage information.
 
 
 ![Desktop](./examples/desktop.png)
@@ -33,9 +33,9 @@ To be used with mrs-developer, see [Volto docs](https://6.dev-docs.plone.org/vol
 <br>
 
 ## Usage <a name="usage"></a>
-To inject the component in the project add the appextras configuration in the config.js file.
+To inject the component in the project add the ``AppExtras`` configuration in the ``config.js`` file.
 
-A suggested way is to use `appExtras` from settings object ([docs](https://docs.voltocms.com/recipes/appextras/)):
+A suggested way is to use `appExtras` from settings object ([docs](https://6.docs.plone.org/volto/recipes/appextras.html)):
 
 ```jsx
 import '@plone/volto/config';
@@ -51,14 +51,9 @@ export default function applyConfig(config) {
   ];
   return config;
 }
-
 ```
 
-
-
-
 <br>
-
 
 ## To determine which paths will be displayed <a name="paths"></a>
 
@@ -85,18 +80,19 @@ export default function applyConfig(config) {
 <br>
 
 ## Customization <a name="customization"></a>
+
 There are several parameters that can be customized
 
 * **socialElements**: List of social items.
     * By default:
         * Facebook
         * Twitter
-        * Whatsapp (Only on mobile)
+        * WhatsApp (Only on mobile)
         * Telegram (Only on mobile)
     * Options:
         * **name** (string): Social name
         * **fa_name** (array): Font awesome icon name. (It is necessary to add it in array format to determine the type of icon. Example: ["fab", "facebook-f"])
-          * [Docs](https://fontawesome.com/how-to-use/on-the-web/using-with/react#features)
+          * [Docs](https://docs-v5.fontawesome.com/web/use-with/react#features)
           * [Icon Gallery](https://fontawesome.com/icons?d=gallery)
         * **color** (string): CSS color value.
         * **sharing_url** (string): Link of the social network to share. ([Examples](https://github.com/bradvin/social-share-urls/blob/0c6d81fc950144e18ada062e0aba90d738b70d90/code/javascript/javascript/social-share-media.js#L151))
@@ -106,11 +102,11 @@ There are several parameters that can be customized
         * In the **desktop** view centered on the right.
         * In the **mobile** view centered on the bottom.
     * Options:
-        * defaultPositions["desktop"] = {[React DOM Style](https://reactjs.org/docs/dom-elements.html#style)}
-        * defaultPositions["mobile"] = {[React DOM Style](https://reactjs.org/docs/dom-elements.html#style)}
-* **logoSize**: Font Awesome logo size. ([Doc](https://fontawesome.com/how-to-use/on-the-web/using-with/react#features))
+        * defaultPositions["desktop"] = {[React DOM Style](https://legacy.reactjs.org/docs/dom-elements.html#style)}
+        * defaultPositions["mobile"] = {[React DOM Style](https://legacy.reactjs.org/docs/dom-elements.html#style)}
+* **logoSize**: Font Awesome logo size. ([Doc](https://fontawesome.com/v5/docs/web/use-with/react#features))
     * By default: "lg".
-    * [Options](https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons#scale): "lg" | "xs" | "sm" | "2x" | "3x" | "4x" | "5x" | "6x" | "7x" | "8x" | "9x" | "10x"
+    * [Options](https://fontawesome.com/docs/web/style/size#scale): "lg" | "xs" | "sm" | "2x" | "3x" | "4x" | "5x" | "6x" | "7x" | "8x" | "9x" | "10x"
 * **buttonSize**: Button with and height.
     * By default: "30px"
 
@@ -197,8 +193,6 @@ export default function applyConfig(config) {
 ![change_value_desktop](./examples/change_value_desktop.png)
 ![change_value_mobile](./examples/change_value_mobile.png)
 
-
-
 <br>
 
 ## Remove existing social item <a name="remove_social_item"></a>
@@ -210,7 +204,6 @@ import {DEFAULT_SOCIAL} from '@codesyntax/volto-social-sharing/defaultSettings';
 // Remove social item by id
 const index = DEFAULT_SOCIAL.findIndex(social => social.id === "fb");
 if (index !== undefined) DEFAULT_SOCIAL.splice(index, 1);
-
 
 export default function applyConfig(config) {
   config.settings.appExtras = [
@@ -242,11 +235,16 @@ export default function applyConfig(config) {
 
 ## Contributing
 
+See [DEVELOP.md](https://github.com/codesyntax/volto-social-sharing/blob/main/DEVELOP.md).
+
 Feel free to send PRs.
 
 ## Icon Author
-By Throwaway icons - https://thenounproject.com/search/?q=share&amp;i=1343423, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=89416553
+
+ - By Throwaway icons - https://thenounproject.com/search/?q=share&amp;i=1343423, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=89416553
 
 ## License
 
 MIT © [CodeSyntax](https://github.com/codesyntax)
+
+See [LICENSE.md](https://github.com/codesyntax/volto-social-sharing/blob/main/LICENSE.md) for details.

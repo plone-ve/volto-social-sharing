@@ -1,15 +1,22 @@
 {
   "name": "@codesyntax/volto-social-sharing",
   "version": "1.6.0",
-  "description": "volto-social-sharing: Volto add-on",
+  "description": "volto-social-sharing: Volto add-on for social sharing.",
   "main": "src/index.js",
+  "author": "CodeSyntax",
   "license": "MIT",
+  "homepage": "https://github.com/codesyntax/volto-social-sharing",
   "keywords": [
     "volto-addon",
+    "social-sharing",
     "volto",
     "plone",
     "react"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:codesyntax/volto-social-sharing.git"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.34",
     "@fortawesome/free-brands-svg-icons": "5.15.2",
@@ -46,5 +53,20 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.overrides",
+        "options": {
+          "parser": "less"
+        }
+      }
+    ]
   }
 }
