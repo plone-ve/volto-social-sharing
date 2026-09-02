@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { defineMessages, useIntl } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { isCmsUi } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
@@ -12,6 +13,13 @@ import './SocialSharing.css';
 import './fontawesome';
 import { SOCIAL_INTERFACE, LOGO_SIZE_INTERFACE } from './interfaces';
 
+export const messages = defineMessages({
+  sendTo: {
+    id: 'Send to ',
+    defaultMessage: 'Send to ',
+  },
+});
+
 const SocialSharing = ({
   location,
   socialElements = DEFAULT_SOCIAL,
@@ -19,6 +27,7 @@ const SocialSharing = ({
   logoSize = DEFAULT_LOGO_SIZE,
   buttonSize = DEFAULT_BUTTON_SIZE,
 }) => {
+  const intl = useIntl();
   const [currentUrl, setCurrentUrl] = useState('');
   const [display, setDisplay] = useState(true);
   const pathName = location?.pathname;
@@ -81,7 +90,9 @@ const SocialSharing = ({
                     >
                       <a
                         target="_blank"
-                        title={`Send to ${social.name}`}
+                        title={
+                          intl.formatMessage(messages.sendTo) + social.name
+                        }
                         href={`${social.sharing_url}${currentUrl}`}
                         className="fa-icon-position"
                         rel="noreferrer"
