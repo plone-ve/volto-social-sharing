@@ -22,7 +22,7 @@ export const DEFAULT_SOCIAL = [
     id: 'tg',
   },
   {
-    name: 'Whatsapp',
+    name: 'WhatsApp',
     fa_name: ['fab', 'whatsapp'],
     color: '#00bb2d',
     sharing_url: 'whatsapp://send?text=',
