@@ -8,6 +8,7 @@ logs
 *.log
 npm-debug.log*
 .DS_Store
+*.mo
 *.swp
 yarn-error.log
 yarn.lock
