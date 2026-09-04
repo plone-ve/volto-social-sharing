@@ -529,6 +529,20 @@ export default function applyConfig(config: ConfigType) {
 }
 ```
 
+#### Example
+
+Below is the result of the previous configuration:
+
+**Desktop version**
+
+![change_value_desktop](https://github.com/codesyntax/volto-social-sharing/blob/main/docs/_static/remove_social_item_desktop.png)
+
+---
+
+**Mobile version**
+
+![change_value_mobile](https://github.com/codesyntax/volto-social-sharing/blob/main/docs/_static/remove_social_item_mobile.png)
+
 ## Development
 
 For more information about the development of this add-on checkout the [DEVELOP.md](https://github.com/codesyntax/volto-social-sharing/blob/main/DEVELOP.md) file.
