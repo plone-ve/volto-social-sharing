@@ -1,0 +1,14 @@
+{
+    "title": "Volto add-on for social sharing.",
+    "frontend_addon_name": "@codesyntax/volto-social-sharing",
+    "description": "volto-social-sharing: Volto add-on for social sharing.",
+    "author": "CodeSyntax",
+    "email": "info@codesyntax.com",
+    "github_organization": "codesyntax",
+    "npm_package_name": "@codesyntax/volto-social-sharing",
+    "use_prerelease_versions": "No",
+    "volto_version": "18.35.1",
+    "initialize_ci": true,
+    "initialize_documentation": true,
+    "__template__": "frontend_addon"
+}

@@ -1,6 +1,10 @@
-.vscode/
 .history
+.storybook-build
+.vscode/
 .eslintrc.js
+*~
+*.mo
+*.swp
 .nyc_output
 project
 coverage
@@ -8,8 +12,6 @@ logs
 *.log
 npm-debug.log*
 .DS_Store
-*.mo
-*.swp
 yarn-error.log
 yarn.lock
 .yarn/*
@@ -17,6 +19,7 @@ yarn.lock
 package-lock.json
 
 node_modules
+/core
 build
 dist
 cypress/videos
@@ -27,4 +30,4 @@ videos
 .env.development.local
 .env.test.local
 .env.production.local
-*~
+

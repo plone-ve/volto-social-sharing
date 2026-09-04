@@ -1,4 +1,4 @@
-name: Changelog check
+name: "Changelog"
 on:
   pull_request:
     types: [assigned, opened, synchronize, reopened, labeled, unlabeled]
@@ -6,38 +6,46 @@ on:
       - main
 
 env:
-  node-version: 18.x
+  base-branch: main
+
+permissions:
+  contents: read
+  pull-requests: read
 
 jobs:
-  build:
+  config:
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'skip changelog') }}
+    uses: ./.github/workflows/config.yml
+
+  checks:
     runs-on: ubuntu-latest
+    needs:
+      - config
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
         with:
           # Fetch all history
           fetch-depth: '0'
 
-      - name: Install pipx
-        run: pip install towncrier
-
-      # node setup
-      - name: Use Node.js ${{ env.node-version }}
-        uses: actions/setup-node@v3
+      - name: Setup uv
+        uses: plone/meta/.github/actions/setup_uv@2.x
         with:
-          node-version: ${{ env.node-version }}
-          cache: 'yarn'
+          working-directory: '.'
 
-      # node install
-      - name: Install dependencies
-        run: yarn
-
-      - name: Check for presence of a Change Log fragment (only pull requests)
+      - name: "Fetch base branch"
         run: |
-          # Fetch the pull request' base branch so towncrier will be able to
-          # compare the current branch with the base branch.
-          # Source: https://github.com/actions/checkout/#fetch-all-branches.
-          git fetch --no-tags origin main
-          towncrier check --compare-with origin/main
-        env:
-          BASE_BRANCH: ${{ github.base_ref }}
-        if: github.event_name == 'pull_request'
+          # Reference: https://github.com/actions/checkout/#fetch-all-branches.
+          git fetch --no-tags origin ${{ env.base-branch }}
+
+      - name: "Frontend: Check"
+        id: frontend-changelog
+        run: |
+          uvx towncrier check --compare-with origin/${{ env.base-branch }} --config ${{ needs.config.outputs.path-frontend }}/towncrier.toml --dir ${{ needs.config.outputs.path-frontend }}
+
+      - name: "Report check"
+        if: ${{ always() }}
+        run: |
+          echo '# Workflow Report' >> $GITHUB_STEP_SUMMARY
+          echo '| Job ID | Conclusion |' >> $GITHUB_STEP_SUMMARY
+          echo '| --- | --- |' >> $GITHUB_STEP_SUMMARY
+          echo '| frontend |${{ steps.frontend-changelog.conclusion }} |' >> $GITHUB_STEP_SUMMARY
