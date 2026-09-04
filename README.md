@@ -373,6 +373,120 @@ Below is the result of the previous configuration:
 
 This is how the configuration looks like in the browser.
 
+## Change the button size <a name="edit_button_size"></a>
+
+```js
+import type { ConfigType } from '@plone/registry';
+
+// import default social list
+import { DEFAULT_SOCIAL } from '@codesyntax/volto-social-sharing/config/defaultSettings';
+
+// Customize the button size value
+const socialButtonSize = '60px';
+
+// Apply the configuration to the Volto app
+export default function applyConfig(config: ConfigType) {
+  config.settings.appExtras = [
+    ...config.settings.appExtras,
+    {
+      match: '**/ekitaldiak/**',
+      component: SocialSharing,
+      props: { buttonSize: socialButtonSize },
+    },
+    {
+      match: '**/eventos/**',
+      component: SocialSharing,
+      props: { buttonSize: socialButtonSize },
+    },
+    {
+      match: '/eu/albisteak/**',
+      component: SocialSharing,
+      props: { buttonSize: socialButtonSize },
+    },
+    {
+      match: '/es/noticias/**',
+      component: SocialSharing,
+      props: { buttonSize: socialButtonSize },
+    },
+  ];
+
+  return config;
+}
+```
+
+#### Example
+
+Below is the result of the previous configuration:
+
+**Desktop version**
+
+![change_value_desktop](https://github.com/codesyntax/volto-social-sharing/blob/main/docs/_static/change_button_size_value_desktop.png)
+
+---
+
+**Mobile version**
+
+![change_value_mobile](https://github.com/codesyntax/volto-social-sharing/blob/main/docs/_static/change_button_size_value_mobile.png)
+
+This is how the configuration looks like in the browser.
+
+## Change the logo size <a name="edit_logo_size"></a>
+
+```js
+import type { ConfigType } from '@plone/registry';
+
+// import default social list
+import { DEFAULT_SOCIAL } from '@codesyntax/volto-social-sharing/config/defaultSettings';
+
+// Customize the logo size value
+const socialLogoSize = '2x';
+
+// Apply the configuration to the Volto app
+export default function applyConfig(config: ConfigType) {
+  config.settings.appExtras = [
+    ...config.settings.appExtras,
+    {
+      match: '**/ekitaldiak/**',
+      component: SocialSharing,
+      props: { logoSize: socialLogoSize },
+    },
+    {
+      match: '**/eventos/**',
+      component: SocialSharing,
+      props: { logoSize: socialLogoSize },
+    },
+    {
+      match: '/eu/albisteak/**',
+      component: SocialSharing,
+      props: { logoSize: socialLogoSize },
+    },
+    {
+      match: '/es/noticias/**',
+      component: SocialSharing,
+      props: { logoSize: socialLogoSize },
+    },
+  ];
+
+  return config;
+}
+```
+
+#### Example
+
+Below is the result of the previous configuration:
+
+**Desktop version**
+
+![change_value_desktop](https://github.com/codesyntax/volto-social-sharing/blob/main/docs/_static/change_logo_size_value_desktop.png)
+
+---
+
+**Mobile version**
+
+![change_value_mobile](https://github.com/codesyntax/volto-social-sharing/blob/main/docs/_static/change_logo_size_value_mobile.png)
+
+This is how the configuration looks like in the browser.
+
 ## Remove existing social item <a name="remove_social_item"></a>
 
 ```js
