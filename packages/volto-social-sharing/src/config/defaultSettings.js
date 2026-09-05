@@ -13,8 +13,7 @@ export const DEFAULT_SOCIAL = [
     fa_name: ['fab', 'twitter'],
     color: '#00acee',
     // https://twitter.com/intent/tweet?url={url}&text={text}
-    sharing_url:
-      'https://twitter.com/intent/tweet?url=',
+    sharing_url: 'https://twitter.com/intent/tweet?url=',
     id: 'tw',
   },
   {

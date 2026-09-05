@@ -3,7 +3,6 @@
  * @module components/SocialSharing/interfaces
  */
 
-
 import PropTypes from 'prop-types';
 
 // SocialSharing interfaces
