@@ -31,8 +31,8 @@ function defaultGetSharingUrl(social, url, text) {
   switch (social.id) {
     case 'fb':
       return `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
-    case 'tw':
-      return `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`;
+    case 'xt':
+      return `https://x.com/intent/post?url=${encodedUrl}&text=${encodedText}`;
     case 'tg':
       return social.only_mobile
         ? `tg://msg_url?url=${encodedUrl}&text=${encodedText}`

@@ -25,12 +25,12 @@ describe('SocialSharing interfaces', () => {
 
   it('accepts a valid social element', () => {
     validateSocialElement({
-      name: 'Twitter',
-      fa_name: ['fab', 'twitter'],
-      color: '#00acee',
-      sharing_url: 'https://twitter.com/intent/tweet?url=',
+      name: 'X',
+      fa_name: ['fab', 'x-twitter'],
+      color: '#000000',
+      sharing_url: 'https://x.com/intent/post?url=',
       only_mobile: true,
-      id: 'tw',
+      id: 'xt',
     });
 
     expect(consoleError).not.toHaveBeenCalled();
@@ -52,10 +52,10 @@ describe('SocialSharing interfaces', () => {
 
   it('validates optional social element fields', () => {
     validateSocialElement({
-      name: 'Twitter',
-      fa_name: ['fab', 'twitter'],
-      color: '#00acee',
-      sharing_url: 'https://twitter.com/intent/tweet?url=',
+      name: 'X',
+      fa_name: ['fab', 'x-twitter'],
+      color: '#000000',
+      sharing_url: 'https://x.com/intent/post?url=',
       only_mobile: 'true',
       id: 123,
     });

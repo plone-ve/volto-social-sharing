@@ -18,11 +18,11 @@ jest.mock('./SocialSharing.css', () => ({}), { virtual: true });
 
 const socialElements = [
   {
-    name: 'Twitter',
-    fa_name: ['fab', 'twitter'],
-    color: '#00acee',
-    sharing_url: 'https://twitter.com/intent/tweet?url=',
-    id: 'tw',
+    name: 'X',
+    fa_name: ['fab', 'x-twitter'],
+    color: '#000000',
+    sharing_url: 'https://x.com/intent/post?url=',
+    id: 'xt',
   },
   {
     name: 'Telegram',
@@ -57,7 +57,7 @@ describe('SocialSharing', () => {
   it('renders non-mobile networks on desktop', async () => {
     renderComponent();
 
-    expect(await screen.findByTitle('Send to Twitter')).toBeTruthy();
+    expect(await screen.findByTitle('Send to X')).toBeTruthy();
     expect(screen.queryByTitle('Send to Telegram')).toBeNull();
     expect(screen.queryByTitle('Send to WhatsApp')).toBeNull();
   });
@@ -66,7 +66,7 @@ describe('SocialSharing', () => {
     window.innerWidth = 375;
     renderComponent();
 
-    expect(await screen.findByTitle('Send to Twitter')).toBeTruthy();
+    expect(await screen.findByTitle('Send to X')).toBeTruthy();
     expect(screen.getByTitle('Send to Telegram')).toBeTruthy();
     expect(screen.getByTitle('Send to WhatsApp')).toBeTruthy();
   });
@@ -87,16 +87,16 @@ describe('SocialSharing', () => {
 
   it('uses the host getSharingUrl override', async () => {
     const getSharingUrl = jest.fn((social) =>
-      social.id === 'tw' ? 'https://example.com/custom-share' : undefined,
+      social.id === 'xt' ? 'https://example.com/custom-share' : undefined,
     );
 
     renderComponent({ getSharingUrl });
 
-    expect(
-      (await screen.findByTitle('Send to Twitter')).getAttribute('href'),
-    ).toBe('https://example.com/custom-share');
+    expect((await screen.findByTitle('Send to X')).getAttribute('href')).toBe(
+      'https://example.com/custom-share',
+    );
     expect(getSharingUrl).toHaveBeenCalledWith(
-      expect.objectContaining({ id: 'tw' }),
+      expect.objectContaining({ id: 'xt' }),
       expect.any(String),
       'Checkout this publication',
     );
