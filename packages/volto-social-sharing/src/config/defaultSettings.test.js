@@ -16,9 +16,9 @@ describe('default social sharing settings', () => {
           fa_name: ['fab', 'facebook-f'],
         }),
         expect.objectContaining({
-          id: 'tw',
-          name: 'Twitter',
-          fa_name: ['fab', 'twitter'],
+          id: 'xt',
+          name: 'X',
+          fa_name: ['fab', 'x-twitter'],
         }),
         expect.objectContaining({
           id: 'tg',

@@ -496,7 +496,7 @@ import { DEFAULT_SOCIAL } from '@codesyntax/volto-social-sharing/config/defaultS
 
 // Remove social item by id
 const socialElements = DEFAULT_SOCIAL.filter(
-  (social: SocialElement) => social.id !== 'tw',
+  (social: SocialElement) => social.id !== 'xt',
 );
 
 // Apply the configuration to the Volto app

@@ -9,12 +9,12 @@ export const DEFAULT_SOCIAL = [
     id: 'fb',
   },
   {
-    name: 'Twitter',
-    fa_name: ['fab', 'twitter'],
-    color: '#00acee',
-    // https://twitter.com/intent/tweet?url={url}&text={text}
-    sharing_url: 'https://twitter.com/intent/tweet?url=',
-    id: 'tw',
+    name: 'X',
+    fa_name: ['fab', 'x-twitter'],
+    color: '#000000',
+    // https://x.com/intent/post?url={url}&text={text}
+    sharing_url: 'https://x.com/intent/post?url=',
+    id: 'xt',
   },
   {
     name: 'Telegram',
