@@ -19,7 +19,7 @@ export const DEFAULT_SOCIAL = [
   {
     name: 'Telegram',
     fa_name: ['fab', 'telegram-plane'],
-    color: '#0088cc',
+    color: '#2AABEE',
     // tg://msg?text={text} or tg://msg_url?url={url}&text={text}
     sharing_url: 'https://t.me/share/url?url=',
     only_mobile: true,
