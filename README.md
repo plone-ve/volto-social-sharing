@@ -28,6 +28,8 @@ Volto social sharing integration addon.
 1. [Customization](#customization)
 1. [New social item](#new_social_item)
 1. [Edit social item](#edit_social_item)
+1. [Change the button size](#edit_button_size)
+1. [Change the logo size](#edit_logo_size)
 1. [Remove social item](#remove_social_item)
 
 <br>
