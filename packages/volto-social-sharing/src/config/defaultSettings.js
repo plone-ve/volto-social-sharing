@@ -28,7 +28,7 @@ export const DEFAULT_SOCIAL = [
   {
     name: 'WhatsApp',
     fa_name: ['fab', 'whatsapp'],
-    color: '#00bb2d',
+    color: '#25D366',
     // whatsapp://send?text={text}, https://wa.me/?text={text} or https://web.whatsapp.com/send?text={text}
     sharing_url: 'whatsapp://send?text=',
     only_mobile: true,
