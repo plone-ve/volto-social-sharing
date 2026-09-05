@@ -30,7 +30,7 @@ module.exports = {
           ['@plone/registry', `${coreLocation}/packages/registry/src`],
           [
             '@codesyntax/volto-social-sharing',
-            './packages/volto-social-sharing/src',
+            '${projectRootPath}/packages/volto-social-sharing/src',
           ],
           ...addonAliases,
         ],
