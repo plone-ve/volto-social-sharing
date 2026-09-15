@@ -1,6 +1,12 @@
 // Default social sharing settings
 export const DEFAULT_SOCIAL = [
   {
+    name: 'Copy link',
+    color: '#e69316',
+    type: 'copy', // Behavioural identifier
+    id: 'cl',
+  },
+  {
     name: 'Facebook',
     fa_name: ['fab', 'facebook-f'],
     color: '#3b5998',

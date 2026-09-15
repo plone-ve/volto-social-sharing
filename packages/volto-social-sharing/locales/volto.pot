@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2026-09-03T14:34:45.071Z\n"
+"POT-Creation-Date: 2026-09-15T13:28:14.807Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -16,6 +16,18 @@ msgstr ""
 #. Default: "Checkout this publication"
 #: components/SocialSharing/SocialSharing
 msgid "Checkout this publication"
+msgstr ""
+
+#. Default: "Copy the link to this page"
+#: components/CopyLinkAnchor/CopyLinkAnchor
+#: components/SocialSharing/SocialSharing
+msgid "Copy the link to this page"
+msgstr ""
+
+#. Default: "Link copied!"
+#: components/CopyLinkAnchor/CopyLinkAnchor
+#: components/SocialSharing/SocialSharing
+msgid "Link copied!"
 msgstr ""
 
 #. Default: "Send to"

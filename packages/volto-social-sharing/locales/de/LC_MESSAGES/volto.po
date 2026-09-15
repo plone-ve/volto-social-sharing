@@ -16,6 +16,18 @@ msgstr ""
 msgid "Checkout this publication"
 msgstr ""
 
+#. Default: "Copy the link to this page"
+#: components/CopyLinkAnchor/CopyLinkAnchor
+#: components/SocialSharing/SocialSharing
+msgid "Copy the link to this page"
+msgstr ""
+
+#. Default: "Link copied!"
+#: components/CopyLinkAnchor/CopyLinkAnchor
+#: components/SocialSharing/SocialSharing
+msgid "Link copied!"
+msgstr ""
+
 #. Default: "Send to"
 #: components/SocialSharing/SocialSharing
 msgid "Send to "

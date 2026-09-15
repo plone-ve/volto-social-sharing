@@ -22,6 +22,14 @@ export const messages = defineMessages({
     id: 'Checkout this publication',
     defaultMessage: 'Checkout this publication',
   },
+  linkCopied: {
+    id: 'Link copied!',
+    defaultMessage: 'Link copied!',
+  },
+  copyTheLinkToThisPage: {
+    id: 'Copy the link to this page',
+    defaultMessage: 'Copy the link to this page',
+  },
 });
 
 function defaultGetSharingUrl(social, url, text) {
@@ -57,6 +65,7 @@ const SocialSharing = ({
   const intl = useIntl();
   const [currentUrl, setCurrentUrl] = useState('');
   const [display, setDisplay] = useState(true);
+  const [copied, setCopied] = useState(false);
   const pathName = location?.pathname;
 
   useEffect(() => {
@@ -71,6 +80,7 @@ const SocialSharing = ({
   // MOBILE checker
   const [isMobile, setIsMobile] = useState(null);
 
+  // Handler for Windows Size Change
   function handleWindowSizeChange() {
     setIsMobile(window.innerWidth <= 768);
   }
@@ -85,7 +95,22 @@ const SocialSharing = ({
 
   const shareText = intl.formatMessage(messages.checkoutThisPublication);
 
-  socialElements = socialElements.map((social) => {
+  // Handler for copying to the clipboard
+  const handleCopyUrl = async (e) => {
+    e.preventDefault();
+    try {
+      await navigator.clipboard.writeText(currentUrl || window.location.href);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500); // Restores the icon after 2.5 seconds
+    } catch (err) {
+      console.error('Could not be copied to the clipboard: ', err);
+    }
+  };
+
+  const processedSocialElements = socialElements.map((social) => {
+    if (social.id === 'cl') {
+      return social;
+    }
     const customSharingUrl = getSharingUrl(social, currentUrl, shareText);
 
     return {
@@ -110,9 +135,17 @@ const SocialSharing = ({
                 : 'vertical volto-social-sharing'
             }
           >
-            {socialElements
+            {processedSocialElements
               .filter((social) => isMobile !== false || !social.only_mobile)
               .map((social) => {
+                const isCopyAction = social.id === 'cl';
+
+                const titleText = isCopyAction
+                  ? copied
+                    ? intl.formatMessage(messages.linkCopied)
+                    : intl.formatMessage(messages.copyTheLinkToThisPage)
+                  : intl.formatMessage(messages.sendTo) + social.name;
+
                 return (
                   <li
                     className={`volto-social-${social.id}`}
@@ -128,16 +161,21 @@ const SocialSharing = ({
                       className="icon-container"
                     >
                       <a
-                        target="_blank"
-                        title={
-                          intl.formatMessage(messages.sendTo) + social.name
-                        }
-                        href={social.sharing_url}
+                        target={isCopyAction ? '_self' : '_blank'}
+                        title={titleText}
+                        href={isCopyAction ? '#copy' : social.sharing_url}
+                        onClick={isCopyAction ? handleCopyUrl : undefined}
                         className="fa-icon-position"
-                        rel="noreferrer"
+                        rel={isCopyAction ? undefined : 'noreferrer'}
                       >
                         <FontAwesomeIcon
-                          icon={social.fa_name}
+                          icon={
+                            isCopyAction
+                              ? copied
+                                ? 'check' // FontAwesome icon to check
+                                : 'copy' // FontAwesome icon to copy
+                              : social.fa_name // FontAwesome icon from defaultSettings.js file
+                          }
                           color="white"
                           size={logoSize}
                           className="fa-icon"

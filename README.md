@@ -40,6 +40,8 @@ Volto social sharing integration addon.
 
 - List of social items by default.
 
+  - Copy the link to this page.
+
   - Share to **Facebook**.
 
   - Share to **Twitter**.

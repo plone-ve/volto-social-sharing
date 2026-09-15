@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Plone\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-02 13:21-0400\n"
-"PO-Revision-Date: 2026-09-02 13:22-0400\n"
+"PO-Revision-Date: 2026-09-15 15:29-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language: es\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -22,6 +22,18 @@ msgstr ""
 #: components/SocialSharing/SocialSharing
 msgid "Checkout this publication"
 msgstr "Revisa esta publicación"
+
+#. Default: "Copy the link to this page"
+#: components/CopyLinkAnchor/CopyLinkAnchor
+#: components/SocialSharing/SocialSharing
+msgid "Copy the link to this page"
+msgstr "Copia el enlace a esta página"
+
+#. Default: "Link copied!"
+#: components/CopyLinkAnchor/CopyLinkAnchor
+#: components/SocialSharing/SocialSharing
+msgid "Link copied!"
+msgstr "¡Enlace copiado!"
 
 #. Default: "Send to"
 #: components/SocialSharing/SocialSharing
