@@ -98,7 +98,7 @@ describe('SocialSharing', () => {
     expect(getSharingUrl).toHaveBeenCalledWith(
       expect.objectContaining({ id: 'xt' }),
       expect.any(String),
-      'Checkout this publication',
+      "I've read this post and I'd like to share it with you. I've attached it to this message",
     );
   });
 });
