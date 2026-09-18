@@ -72,9 +72,13 @@ This is the add-on configuration looks like in the browser.
 
 This add-on support the following languages:
 
-- English
+- Deutsch.
 
-- Spanish
+- English.
+
+- Spanish.
+
+- Brazilian Portuguese.
 
 ## Compatibility <a name="compatibility"></a>
 
