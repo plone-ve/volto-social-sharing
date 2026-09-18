@@ -104,6 +104,7 @@ const SocialSharing = ({
       setCopied(true);
       setTimeout(() => setCopied(false), 2500); // Restores the icon after 2.5 seconds
     } catch (err) {
+      // eslint-disable-next-line no-console
       console.error('Could not be copied to the clipboard: ', err);
     }
   };
