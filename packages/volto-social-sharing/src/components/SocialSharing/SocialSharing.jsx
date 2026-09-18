@@ -33,6 +33,7 @@ export const messages = defineMessages({
   },
 });
 
+// Function for build the 'sharing URL'.
 function defaultGetSharingUrl(social, url, text) {
   const encodedUrl = encodeURIComponent(url);
   const encodedText = encodeURIComponent(text);

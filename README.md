@@ -30,6 +30,7 @@ Volto social sharing integration addon.
 1. [Edit social item](#edit_social_item)
 1. [Change the button size](#edit_button_size)
 1. [Change the logo size](#edit_logo_size)
+1. [Change the sharing URL item](#change_sharing_url_item)
 1. [Remove social item](#remove_social_item)
 
 <br>
@@ -46,7 +47,7 @@ Volto social sharing integration addon.
 
   - Share to **Facebook**.
 
-  - Share to **Twitter**.
+  - Share to **X**.
 
   - Share to **WhatsApp** (Only on mobile is vissible).
 
@@ -236,7 +237,7 @@ There are several parameters that can be customized
 * ``socialElements``: List of social items.
     * By default:
         * Facebook
-        * Twitter
+        * X
         * WhatsApp (Only on mobile)
         * Telegram (Only on mobile)
     * Options:
@@ -500,6 +501,54 @@ Below is the result of the previous configuration:
 ![change_value_mobile](https://github.com/codesyntax/volto-social-sharing/blob/main/docs/_static/change_logo_size_value_mobile.png)
 
 This is how the configuration looks like in the browser.
+
+## Change the sharing URL item <a name="change_sharing_url_item"></a>
+
+```js
+import type { ConfigType } from '@plone/registry';
+
+// Override the 'defaultGetSharingUrl' function for build the 'sharing URL'.
+const getSharingUrl = (social: SocialElement, url: string, text: string) => {
+  const encodedUrl = encodeURIComponent(url);
+  const encodedText = encodeURIComponent(text);
+
+  // X/Twitter sharing URL
+  if (social.id === 'xt') {
+    return `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`;
+  }
+
+  return undefined;
+};
+
+// Apply the configuration to the Volto app
+export default function applyConfig(config: ConfigType) {
+  config.settings.appExtras = [
+    ...config.settings.appExtras,
+    {
+      match: '**/ekitaldiak/**',
+      component: SocialSharing,
+      props: { getSharingUrl },
+    },
+    {
+      match: '**/eventos/**',
+      component: SocialSharing,
+      props: { getSharingUrl },
+    },
+    {
+      match: '/eu/albisteak/**',
+      component: SocialSharing,
+      props: { getSharingUrl },
+    },
+    {
+      match: '/es/noticias/**',
+      component: SocialSharing,
+      props: { getSharingUrl },
+    },
+  ];
+
+  return config;
+}
+```
 
 ## Remove existing social item <a name="remove_social_item"></a>
 

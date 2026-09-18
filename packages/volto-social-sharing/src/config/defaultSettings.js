@@ -3,7 +3,7 @@ export const DEFAULT_SOCIAL = [
   {
     name: 'Copy link',
     color: '#e69316',
-    type: 'copy', // Behavioural identifier
+    type: 'copy', // Button Behavioural ID
     id: 'cl',
   },
   {
