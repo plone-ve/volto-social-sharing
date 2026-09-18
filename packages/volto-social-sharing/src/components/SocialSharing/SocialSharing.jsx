@@ -18,9 +18,10 @@ export const messages = defineMessages({
     id: 'Send to ',
     defaultMessage: 'Send to ',
   },
-  checkoutThisPublication: {
-    id: 'Checkout this publication',
-    defaultMessage: 'Checkout this publication',
+  msgText: {
+    id: "I've read this post and I'd like to share it with you. I've attached it to this message",
+    defaultMessage:
+      "I've read this post and I'd like to share it with you. I've attached it to this message",
   },
   linkCopied: {
     id: 'Link copied!',
@@ -93,7 +94,7 @@ const SocialSharing = ({
   }, []);
   // end - MOBILE checker
 
-  const shareText = intl.formatMessage(messages.checkoutThisPublication);
+  const shareText = intl.formatMessage(messages.msgText);
 
   // Handler for copying to the clipboard
   const handleCopyUrl = async (e) => {

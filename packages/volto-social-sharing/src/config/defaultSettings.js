@@ -7,6 +7,14 @@ export const DEFAULT_SOCIAL = [
     id: 'cl',
   },
   {
+    name: 'Email',
+    fa_name: ['fas', 'envelope'],
+    color: '#605E5C',
+    // mailto:?body={text}{url}
+    sharing_url: 'mailto:?body=',
+    id: 'em',
+  },
+  {
     name: 'Facebook',
     fa_name: ['fab', 'facebook-f'],
     color: '#3b5998',

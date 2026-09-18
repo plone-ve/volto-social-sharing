@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Plone\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-02 13:21-0400\n"
-"PO-Revision-Date: 2026-09-15 15:29-0400\n"
+"PO-Revision-Date: 2026-09-18 17:05-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language: es\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -18,19 +18,17 @@ msgstr ""
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
 "X-Generator: Poedit 3.9\n"
 
-#. Default: "Checkout this publication"
-#: components/SocialSharing/SocialSharing
-msgid "Checkout this publication"
-msgstr "Revisa esta publicación"
-
 #. Default: "Copy the link to this page"
-#: components/CopyLinkAnchor/CopyLinkAnchor
 #: components/SocialSharing/SocialSharing
 msgid "Copy the link to this page"
 msgstr "Copia el enlace a esta página"
 
+#. Default: "I've read this post and I'd like to share it with you. I've attached it to this message"
+#: components/SocialSharing/SocialSharing
+msgid "I've read this post and I'd like to share it with you. I've attached it to this message"
+msgstr "He leído esta publicación y me gustaría compartirla con vosotros. La cual he adjuntado a este mensaje"
+
 #. Default: "Link copied!"
-#: components/CopyLinkAnchor/CopyLinkAnchor
 #: components/SocialSharing/SocialSharing
 msgid "Link copied!"
 msgstr "¡Enlace copiado!"

@@ -16,19 +16,17 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
-#. Default: "Checkout this publication"
-#: components/SocialSharing/SocialSharing
-msgid "Checkout this publication"
-msgstr ""
-
 #. Default: "Copy the link to this page"
-#: components/CopyLinkAnchor/CopyLinkAnchor
 #: components/SocialSharing/SocialSharing
 msgid "Copy the link to this page"
 msgstr ""
 
+#. Default: "I've read this post and I'd like to share it with you. I've attached it to this message"
+#: components/SocialSharing/SocialSharing
+msgid "I've read this post and I'd like to share it with you. I've attached it to this message"
+msgstr ""
+
 #. Default: "Link copied!"
-#: components/CopyLinkAnchor/CopyLinkAnchor
 #: components/SocialSharing/SocialSharing
 msgid "Link copied!"
 msgstr ""

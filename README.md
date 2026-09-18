@@ -42,6 +42,8 @@ Volto social sharing integration addon.
 
   - Copy the link to this page.
 
+  - Share to **Email**.
+
   - Share to **Facebook**.
 
   - Share to **Twitter**.
