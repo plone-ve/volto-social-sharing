@@ -15,6 +15,8 @@ export const SOCIAL_INTERFACE = {
   color: PropTypes.string.isRequired,
   // URL used for sharing content on the social network
   sharing_url: PropTypes.string.isRequired,
+  // Optional: Button Behavioural ID
+  type: PropTypes.string,
   // Optional: If true, the social network button will only be displayed on mobile devices
   only_mobile: PropTypes.bool,
   // Optional: Unique identifier for the social network button
