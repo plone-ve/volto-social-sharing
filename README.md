@@ -245,6 +245,10 @@ There are several parameters that can be customized
           * [Docs](https://docs-v5.fontawesome.com/web/use-with/react#features)
           * [Icon Gallery](https://fontawesome.com/icons?d=gallery)
         * ``color`` (string): CSS color value.
+        * ``type`` (string): Button Behavioural ID.
+          * Options:
+            * By default: ``copy``.
+            * ``copy`` = ID for `Copy the link to this page` Button Behavioural.
         * ``sharing_url`` (string): Link of the social network to share. ([Examples](https://github.com/bradvin/social-share-urls/blob/0c6d81fc950144e18ada062e0aba90d738b70d90/code/javascript/javascript/social-share-media.js#L151))
         * ``only_mobile`` (bool) *optional: Set to ``true`` if it will only be displayed in the mobile view.
 * ``bannerPosition``: Position of social items banner.
